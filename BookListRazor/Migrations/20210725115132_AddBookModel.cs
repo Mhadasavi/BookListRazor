@@ -2,7 +2,7 @@
 
 namespace BookListRazor.Migrations
 {
-    public partial class addBookModelToDb : Migration
+    public partial class AddBookModel : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,7 +13,7 @@ namespace BookListRazor.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Author = table.Column<int>(type: "int", nullable: true)
+                    Author = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
